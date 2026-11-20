@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>For you</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      document.documentElement.className += " js";
+    </script>
+  </head>
+  <body>
+    <div class="progress" id="progress"></div>
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <header class="bar">
+      <a class="logo" href="#top" aria-label="Back to top">&#9829;</a>
+      <nav aria-label="Sections">
+        <a href="#reasons-sec">Reasons</a><a href="#memories">Memories</a
+        ><a href="#letter">Letter</a>
+      </nav>
+      <button id="theme" type="button" aria-label="Switch light or dark mode">
+        &#9680;
+      </button>
+    </header>
+
+    <main id="top">
+      <h1 id="name">Her name</h1>
+      <p class="lead">
+        I made you a little corner of the internet, just so you have somewhere
+        to come back to.
+      </p>
+
+      <div class="counter">
+        <div><b id="d">0</b><span>days</span></div>
+        <div><b id="h">0</b><span>hours</span></div>
+        <div><b id="m">0</b><span>minutes</span></div>
+        <div><b id="s">0</b><span>seconds</span></div>
+      </div>
+      <p class="since" id="since">of being with you, and counting.</p>
+
+      <section id="reasons-sec">
+        <h2>Things I love about you</h2>
+        <p class="hint">Tap each heart to open it.</p>
+        <ul class="reasons" id="reasons"></ul>
+      </section>
+
+      <section id="memories">
+        <h2>Our memories</h2>
+        <p class="hint">Tap a photo to open it.</p>
+        <div class="gallery">
+          <button
+            class="tile"
+            type="button"
+            data-caption="The day I knew it was you.">
+            <img src="kohnorea.jpg" alt="" /><span><b>&#9829;</b>Photo 1</span>
+          </button>
+          <button
+            class="tile"
+            type="button"
+            data-caption="You laughing at my bad jokes.">
+            <img src="cafe.jpg" alt="" /><span><b>&#9829;</b>Photo 2</span>
+          </button>
+          <button
+            class="tile"
+            type="button"
+            data-caption="Onec day in funnmal.">
+            <img src="fun mal.jpg" alt="" /><span><b>&#9829;</b>Photo 3</span>
+          </button>
+          <button class="tile" type="button" data-caption="too full of food.">
+            <img src="hotpot.jpg" alt="" /><span><b>&#9829;</b>Photo 4</span>
+          </button>
+          <button class="tile" type="button" data-caption="enjoy club.">
+            <img src="club.jpg" alt="" /><span><b>&#9829;</b>Photo 5</span>
+          </button>
+          <button
+            class="tile"
+            type="button"
+            data-caption="Can’t wait for the next one.">
+            <img src="club2.jpg" alt="" /><span><b>&#9829;</b>Photo 6</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="letter">
+        <h2>A letter</h2>
+        <div class="letter">
+          <p>Hi love,</p>
+          <p>
+            I don&rsquo;t say it enough, so I&rsquo;m writing it down where I
+            can&rsquo;t get shy: you make ordinary days feel like something
+            worth remembering.
+          </p>
+          <p>
+            Thank you for your patience, your laugh, and for choosing me again
+            every day. I&rsquo;m so glad it&rsquo;s you.
+          </p>
+          <p class="sign">Always yours</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>One more thing</h2>
+        <p class="hint">Press the button.</p>
+        <button class="again" id="btn" type="button">
+          Do you know I love you?
+        </button>
+        <p id="answer" aria-live="polite"></p>
+        <div class="center">
+          <button class="love-btn" id="loveBtn" data-url="./click.html">
+            <img class="sticker" src="sticker.jpg" alt="sticker" />
+            <span>See More</span>
+            <span class="heart">&#10084;</span>
+          </button>
+
+          <!-- loading screen -->
+          <div class="love-loader" id="loveLoader" hidden>
+            <div class="love-loader-box">
+              <img src="sticker.jpg" alt="" class="love-loader-pic" />
+              <p>Loading something sweet...</p>
+              <div class="love-loader-bar"><i></i></div>
+            </div>
+          </div>
+        </div>
+        <audio
+          id="loveSound"
+          src="kimi-no-toriko-song-lyrics-1.mp3"
+          preload="auto"></audio>
+      </section>
+    </main>
+    <div
+      class="lightbox"
+      id="lightbox"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photo viewer">
+      <button
+        class="lb-close"
+        id="lbClose"
+        type="button"
+        aria-label="Close photo">
+        &#10005;
+      </button>
+      <div class="lb-card" id="lbCard">
+        <div class="lb-art" id="lbArt"></div>
+        <p id="lbCaption"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
